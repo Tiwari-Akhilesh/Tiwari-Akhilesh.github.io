@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akhilesh S. Tiwari</title>
+<meta name="description" content="PhD candidate in Aerospace Engineering at UT Austin working on rarefied gas dynamics, direct simulation Monte Carlo, and vacuum flow modelling.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌀</text></svg>">
+<style>
+  :root{
+    --bg:#fbfbf9; --fg:#1a1a1a; --muted:#5f5f5c; --rule:#e2e2dd;
+    --accent:#1f5f8b; --card:#ffffff;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#15161a; --fg:#e8e8e4; --muted:#9a9a96; --rule:#2b2d33;
+           --accent:#7fb6dd; --card:#1c1e23; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:var(--sans); font-size:17px; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 20px 80px}
+  header{padding:72px 0 8px}
+  h1{
+    font-family:var(--serif); font-weight:600; font-size:2.5rem;
+    letter-spacing:-.02em; margin:0 0 6px; line-height:1.1;
+  }
+  .role{color:var(--muted); font-size:1.03rem; margin:0 0 4px}
+  .role a{color:inherit}
+  .lede{font-size:1.1rem; margin:28px 0 0}
+  h2{
+    font-family:var(--sans); font-size:.78rem; font-weight:650;
+    letter-spacing:.11em; text-transform:uppercase; color:var(--muted);
+    margin:56px 0 18px; padding-bottom:8px; border-bottom:1px solid var(--rule);
+  }
+  a{color:var(--accent); text-decoration:none; border-bottom:1px solid transparent}
+  a:hover{border-bottom-color:currentColor}
+  p{margin:0 0 16px}
+  ul{margin:0; padding:0; list-style:none}
+  .areas li{
+    padding:14px 0; border-bottom:1px solid var(--rule);
+  }
+  .areas li:last-child{border-bottom:none}
+  .areas b{display:block; font-size:1rem; margin-bottom:3px}
+  .areas span{color:var(--muted); font-size:.95rem}
+  .pubs li{
+    padding:16px 0; border-bottom:1px solid var(--rule); font-size:.97rem;
+  }
+  .pubs li:last-child{border-bottom:none}
+  .pubs .me{font-weight:650}
+  .pubs .venue{font-style:italic; color:var(--muted)}
+  .tag{
+    display:inline-block; font-family:var(--mono); font-size:.68rem;
+    letter-spacing:.06em; text-transform:uppercase; padding:2px 7px;
+    border:1px solid var(--accent); color:var(--accent);
+    border-radius:3px; margin-left:7px; vertical-align:2px;
+  }
+  figure{margin:0; padding:0}
+  figure img{
+    width:100%; height:auto; display:block; border-radius:4px;
+    border:1px solid var(--rule); background:var(--card);
+  }
+  figcaption{color:var(--muted); font-size:.88rem; margin-top:12px; line-height:1.55}
+  .awards li{padding:9px 0; font-size:.97rem; color:var(--fg)}
+  .awards .yr{font-family:var(--mono); font-size:.82rem; color:var(--muted); margin-right:10px}
+  .contact a{display:inline-block; margin-right:22px; font-size:1rem}
+  footer{
+    margin-top:64px; padding-top:20px; border-top:1px solid var(--rule);
+    color:var(--muted); font-size:.85rem;
+  }
+  @media (max-width:560px){
+    header{padding-top:48px}
+    h1{font-size:2rem}
+    body{font-size:16px}
+    .contact a{display:block; margin:0 0 10px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Akhilesh S. Tiwari</h1>
+  <p class="role">PhD candidate, Aerospace Engineering &middot; <a href="https://www.utexas.edu">The University of Texas at Austin</a></p>
+  <p class="role">Computational Fluid Physics Lab, with <a href="https://www.ae.utexas.edu/people/faculty/faculty-directory/goldstein">Prof. David B. Goldstein</a></p>
+
+  <p class="lede">
+    I model gas flows where the continuum assumption breaks down &mdash; rocket plumes expanding
+    into vacuum, transport inside low-pressure chambers, spacecraft surfaces in low Earth orbit.
+    My work couples continuum CFD to direct simulation Monte Carlo across four orders of magnitude
+    in density, and runs at scale on national supercomputers.
+  </p>
+</header>
+
+<h2>Research</h2>
+<ul class="areas">
+  <li>
+    <b>Rarefied gas dynamics &amp; DSMC</b>
+    <span>Variable soft sphere collisions, Knudsen-based adaptive refinement, continuum-breakdown
+    criteria, gas&ndash;surface interaction and accommodation modelling.</span>
+  </li>
+  <li>
+    <b>Coupled continuum&rarr;rarefied simulation</b>
+    <span>OpenFOAM to SPARTA pipelines spanning collisional nozzle flow through to free-molecular
+    vacuum transport, on up to 448 MPI ranks.</span>
+  </li>
+  <li>
+    <b>Plume impingement &amp; orbital debris</b>
+    <span>Contactless detumbling of uncooperative targets by thruster plume momentum transfer,
+    including off-pointing, atmospheric and backscatter sensitivities.</span>
+  </li>
+  <li>
+    <b>Surrogate-based design optimisation</b>
+    <span>Gaussian-process surrogates and Bayesian optimisation over expensive kinetic solvers,
+    with cheap screening filters and documented validity limits.</span>
+  </li>
+</ul>
+
+<h2>Selected publications</h2>
+<ul class="pubs">
+  <li>
+    <span class="me">A. S. Tiwari</span>, A. Moreno, et al.
+    &ldquo;<a href="https://www.sciencedirect.com/science/article/pii/S0094576526003486">Space debris
+    detumbling via plume impingement: off-pointing, atmosphere, and backscatter effects</a>.&rdquo;
+    <span class="venue">Acta Astronautica</span> 247:691&ndash;705, 2026.
+  </li>
+  <li>
+    S. Nair, J. Neal, A. Moreno, <span class="me">A. S. Tiwari</span>, et al.
+    &ldquo;<a href="https://arc.aiaa.org/doi/full/10.2514/1.A36421">Computational and experimental
+    investigation of nozzle plume impingement for detumbling orbital debris</a>.&rdquo;
+    <span class="venue">Journal of Spacecraft and Rockets</span>, 2026.
+  </li>
+  <li>
+    <span class="me">A. S. Tiwari</span>, S. Nair, D. B. Goldstein.
+    &ldquo;<a href="https://arc.aiaa.org/doi/10.2514/1.A36079">Single- and multinozzle plume
+    impingement to detumble space debris</a>.&rdquo;
+    <span class="venue">Journal of Spacecraft and Rockets</span>, 2024.
+  </li>
+  <li>
+    <span class="me">A. S. Tiwari</span>, S. Kumar.
+    &ldquo;<a href="https://doi.org/10.1063/5.0137038">Effect of acoustic perturbation on vortex
+    street transition in a flowing soap film</a>.&rdquo;
+    <span class="venue">Physics of Fluids</span>, 2023.<span class="tag">Featured article</span>
+  </li>
+  <li>
+    A. Burtsev, F. Muhammad, <span class="me">A. S. Tiwari</span>, et al.
+    &ldquo;<a href="https://arc.aiaa.org/doi/abs/10.2514/6.2026-2059">Effects of modeling measured
+    surface roughness on orbital drag in low Earth orbits</a>.&rdquo;
+    AIAA SciTech Forum, 2026.
+  </li>
+  <li>
+    <span class="me">A. S. Tiwari</span>, A. Moreno, et al.
+    &ldquo;<a href="https://arc.aiaa.org/doi/10.2514/6.2025-1162">Optimizing space debris detumbling
+    using DSMC: plume impingement dynamics and sensitivities</a>.&rdquo;
+    AIAA SciTech Forum, 2025.
+  </li>
+  <li>
+    R. You, <span class="me">A. S. Tiwari</span>, S. A. Kinnas.
+    &ldquo;<a href="https://onepetro.org/SNAMETOS/proceedings/TOS22/1-TOS22/D011S003R005/484611">Viscous
+    vorticity equation (VISVE) model applied to oscillatory turbulent flow around a cylinder</a>.&rdquo;
+    SNAME Offshore Symposium, 2022.
+  </li>
+</ul>
+<p style="margin-top:18px"><a href="https://scholar.google.com/citations?user=a58gqLgAAAAJ&amp;hl=en">Full list on Google Scholar &rarr;</a></p>
+
+<h2>Dance of a vortex street</h2>
+<figure>
+  <img src="images/vortex-street-gfm.jpeg" alt="Soap-film flow visualisation showing vortex streets shed behind cylinders of five different cross-sections, with and without acoustic perturbation.">
+  <figcaption>
+    Wakes behind cylinders of five cross-sections in a flowing soap film, visualised by thin-film
+    interference. Acoustic perturbation shifts where the primary vortex street transitions into a
+    secondary one &mdash; by up to 25% of the transition location for rhomboid cylinders.
+    Presented at the APS Division of Fluid Dynamics
+    <a href="https://gfm.aps.org/">Gallery of Fluid Motion</a>, 2023, with Prof. Sanjay Kumar
+    (IIT Kanpur). The underlying study is the <em>Physics of Fluids</em> featured article above.
+  </figcaption>
+</figure>
+
+<h2>Awards</h2>
+<ul class="awards">
+  <li><span class="yr">2024&ndash;25</span>Charles M. Simmons Endowed Presidential Fellowship in Engineering, UT Austin</li>
+  <li><span class="yr">2025</span>Livermore Lab Foundation Award, Lawrence Livermore National Laboratory</li>
+  <li><span class="yr">2023</span>Featured Article, <em>Physics of Fluids</em></li>
+  <li><span class="yr">2021&ndash;24</span>Cockrell School of Engineering Scholarship, UT Austin</li>
+  <li><span class="yr">2018</span>All India Rank 46, GATE Aerospace Engineering (98.88th percentile)</li>
+  <li><span class="yr">2017</span>Silver Medalist, Aeronautical Engineering, Hindustan University</li>
+</ul>
+
+<h2>Elsewhere</h2>
+<p class="contact">
+  <a href="cv.html">Full CV</a>
+  <a href="mailto:akhi.s.tiwari@gmail.com">akhi.s.tiwari@gmail.com</a>
+  <a href="https://scholar.google.com/citations?user=a58gqLgAAAAJ&amp;hl=en">Google Scholar</a>
+  <a href="https://www.linkedin.com/in/akhileshtiwari1/">LinkedIn</a>
+</p>
+<!-- Once you compile Resume_2027_semiconductor_simulation.tex, drop the PDF in this folder
+     as cv.pdf and uncomment the line below. Do NOT use the old archival PDFs.
+<p class="contact"><a href="cv.pdf">Download CV (PDF)</a></p>
+-->
+
+
+<footer>
+  Austin, Texas &middot; Last updated October 2026
+</footer>
+
+</div>
+</body>
+</html>
