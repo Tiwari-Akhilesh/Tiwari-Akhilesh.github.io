@@ -26,6 +26,13 @@
   }
   .wrap{max-width:720px; margin:0 auto; padding:0 20px 80px}
   header{padding:72px 0 8px}
+  .masthead{display:flex; align-items:flex-start; gap:30px}
+  .masthead-text{flex:1; min-width:0}
+  .portrait{
+    width:140px; height:140px; flex:none; margin-top:7px;
+    display:block; border-radius:5px; object-fit:cover;
+    border:1px solid var(--rule);
+  }
   h1{
     font-family:var(--serif); font-weight:600; font-size:2.5rem;
     letter-spacing:-.02em; margin:0 0 6px; line-height:1.1;
@@ -76,6 +83,8 @@
   @media (max-width:560px){
     header{padding-top:48px}
     h1{font-size:2rem}
+    .masthead{gap:20px}
+    .portrait{width:92px; height:92px; margin-top:4px}
     body{font-size:16px}
     .contact a{display:block; margin:0 0 10px}
   }
@@ -85,9 +94,14 @@
 <div class="wrap">
 
 <header>
-  <h1>Akhilesh S. Tiwari</h1>
-  <p class="role">PhD candidate, Aerospace Engineering &middot; <a href="https://www.utexas.edu">The University of Texas at Austin</a></p>
-  <p class="role">Computational Fluid Physics Lab, with <a href="https://www.ae.utexas.edu/people/faculty/faculty-directory/goldstein">Prof. David B. Goldstein</a></p>
+  <div class="masthead">
+    <div class="masthead-text">
+      <h1>Akhilesh S. Tiwari</h1>
+      <p class="role">PhD candidate, Aerospace Engineering &middot; <a href="https://www.utexas.edu">The University of Texas at Austin</a></p>
+      <p class="role">Computational Fluid Physics Lab, with <a href="https://www.ae.utexas.edu/people/faculty/faculty-directory/goldstein">Prof. David B. Goldstein</a></p>
+    </div>
+    <img class="portrait" src="images/portrait.jpg" width="140" height="140" alt="Akhilesh S. Tiwari">
+  </div>
 
   <p class="lede">
     I model gas flows where the continuum assumption breaks down &mdash; rocket plumes expanding
